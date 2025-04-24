@@ -51,4 +51,11 @@ public class HolaMundoController {
             return "Error, no se puede dividir entre 0";
         }else {return String.valueOf(a/b);}
     }
+
+    @GetMapping("/dividir2/{a}/{b}")
+    public int dividir2(@PathVariable int a, @PathVariable int b) {
+        if (b==0) {
+            return 0;
+        }else {return (a/b);}
+    }
 }
